@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact List</title>
+  <!-- Link your CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="contact-list">
+  <div class="content">
+    <h1>Contact List</h1>
+    <ul id="contactList"></ul>
+  </div>
+</section>
+
+<script>
+  // Retrieve contacts array from local storage
+  var contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+
+  // Display each contact in the list
+  var contactList = document.getElementById('contactList');
+  contacts.forEach(function(contact, index) {
+    var listItem = document.createElement('li');
+    listItem.innerHTML = `<strong>Contact ${index + 1}:</strong> Email: ${contact.email}, Phone: ${contact.phone}, Message: ${contact.message}`;
+    contactList.appendChild(listItem);
+  });
+</script>
+
+</body>
+</html>

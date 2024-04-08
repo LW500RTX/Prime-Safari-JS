@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Subscription</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="newsletter-box" id="newsLetter">
+        <h2>Sign up for our newsletter</h2>
+        <p>Get the latest news and updates delivered straight to your inbox.</p>
+        <form onsubmit="return storeNewsLetter()">
+            <input type="email" placeholder="Enter your email address" id="emailInput">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+    <h2>Newsletter Subscribers</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Email Address</th>
+            </tr>
+        </thead>
+        <tbody id="subscriberList">
+            <!-- Subscribers will be dynamically inserted here -->
+        </tbody>
+    </table>
+
+    <script src="newsletter.js"></script>
+</body>
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets\album/lion.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets\album/lion.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime-Safari.Lk | Introduction</title>
+    <link rel="stylesheet" href="stylein.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+</head>
+
+<body>
+
+    <input type="checkbox" id="bars">
+    <nav class="nav-bar" id="navbar">
+        <div class="content">
+            <div class="site-logo">
+                <a href="#" class="logo-link">Prime-Safari.LK</a>
+            </div>
+
+
+            <ul class="navigation">
+                <li class="link"><a href="./index.html">home</a></li>
+                <li class="link"><a href="./sri lanken willife introduction.html">SL Wildlife</a></li>
+                <li class="link"><a href="#next">National Parks <i class="fas fa-caret-down"></i></a>
+                    <ul class="sub-nav">
+                        <li class="link"><a href="./prime safari Yala National Park.html ">Yala</a></li>
+                        <li class="link"><a href="./prime safari wilpaththu.html ">Wilpattu</a></li>
+                    </ul>
+                </li>
+                <li class="link"><a href="./prime safari animals.html">Animals<i class="fas fa-caret-down"></i></a>
+                    <ul class="sub-nav">
+                        <li class="link"><a href="./prime safari The Sri Lankan Leopard.html ">Leopard</a></li>
+                    </ul>
+                </li>
+                <li class="link"><a href="./Conservation.html">Conservation</a></li>
+                <li class="link"><a href="./index.html#blog">topics</a></li>
+                <li class="link"><a href="./index.html#gallery">gallery</a></li>
+                <li class="link"><a href="#contact">contact</a></li>
+                <li class="link"><a href="./index101.html">Log In</a></li>
+
+
+            </ul>
+
+            <label for='bars' class="icon-bars"><i class="ri-bar-chart-2-fill"></i></label>
+        </div>
+    </nav>
+
+    <header class="home" id="home">
+
+        <div class="content">
+            <h1> Journey <strong> through </strong> Wildlife <strong> Havens </strong> </h1>
+            <h4>Sri lanken wildlife Introduction</h4>
+        </div>
+    </header>
+
+    <section x-data="srilankanWildLife">
+        <section class="about" id="about">
+            <div class="content">
+                <button onclick="showLoginDialog()" id="editButton" style="display: none;">
+                    <h1>Edit-Content</h1><i class="fal fa-edit"></i>
+                  </button>
+                <div class="items">
+
+                    <div class="image">
+                        <img src="./assets/pexels-future-kiiid-3567847.avif" alt="" srcset="">
+                    </div>
+                    <div class="item">
+                        <div class="item-content">
+                            <h2 x-text="content02" id="con01"></h2>
+
+
+                            <div class="about-desc">
+                                <p x-text="aboutOne" id="ab"></p>
+                                <p x-text="aboutTow" id="adt"></p>
+                                <p x-text="aboutThree" id="adth"></p>
+                                <p x-text="aboutFour" id="adf"></p>
+                                <p x-text="aboutFive" id="adfi"></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section class="next" id="next">
+            <div class="heading">
+                <h1 class="title" x-text="wildL" id="wil01"></h1>
+            </div>
+            <div class="content">
+                <button onclick="showLoginDialog()" id="editButton1" style="display: none;">
+                    <h1>Edit-Content</h1><i class="fal fa-edit"></i>
+                  </button>
+                <div class="items">
+
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/album/pexels-md-siddiq-3721576.jpg" alt="" srcset="">
+                        </div>
+                        <div class="content-card">
+                            <h4 x-text="Minneriya" id="min01"></h4>
+                            <p x-text="minneriyaContent" id="min02"></p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/album/pexels-ishara-kasthuriarachchi-6031391.jpg" alt="" srcset="">
+                        </div>
+                        <div class="content-card">
+                            <h4 x-text="horton" id="ho"></h4>
+                            <p x-text="hortonContent" id="hor"></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/album/kotiya.jpg" alt="" srcset="">
+                        </div>
+                        <div class="content-card">
+                            <h4 x-text="sinharaja" id="sin"></h4>
+                            <p x-text="sinharajaContent" id="sin01"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="about" id="about">
+            <div class="content">
+                <button onclick="showLoginDialog()" id="editButton2" style="display: none;">
+                    <h1>Edit-Content</h1><i class="fal fa-edit"></i>
+                  </button>
+                <div class="items">
+
+                    <div class="image">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126426.81345921675!2d80.76227283606407!3d8.01564429201067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afb6009a20be05d%3A0xa4d046f2f06b05f5!2sMinneriya%20National%20Park!5e0!3m2!1sen!2slk!4v1705139704054!5m2!1sen!2slk"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+
+
+                    <div class="item">
+                        <div class="item-content">
+                            <h2 class="about-title">
+                                <h2 x-text="minneriyaPark" id="min100"></h2>
+                            </h2>
+                            <div class="about-desc">
+                                <p x-text="minneriyaContent01" id="min200"></p>
+                                <p x-text="minneriyaContent02" id="min300"></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section class="about" id="about">
+            <div class="content">
+                <button onclick="showLoginDialog()" id="editButton3" style="display: none;">
+                    <h1>Edit-Content</h1><i class="fal fa-edit"></i>
+                  </button>
+                <div class="items">
+
+                    <div class="image">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126773.5692341493!2d80.7199358360515!3d6.8094459931880476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3882edb4b78ef%3A0xcebca89153777249!2sHorton%20Plains%20National%20Park!5e0!3m2!1sen!2slk!4v1705139794888!5m2!1sen!2slk"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="item">
+                        <div class="item-content">
+                            <h2 class="about-title">
+                                <h2 x-text="Horton01 " id="hor100"></h2>
+                                <div class="about-desc">
+                                    <p x-text="hortonContent01" id="hor200"></p>
+                                    <p x-text="hortonContent02" id="hor300"></p>
+                                </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="content">
+                <button onclick="showLoginDialog()" id="editButton4" style="display: none;">
+                    <h1>Edit-Content</h1><i class="fal fa-edit"></i>
+                  </button>
+                <div class="items">
+
+                    <div class="image">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126876.77301272657!2d80.37762913604766!3d6.4069907935837245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3e76bd109d45f%3A0x8c0ef1010649701b!2sSinharaja%20Forest%20Reserve!5e0!3m2!1sen!2slk!4v1705139846922!5m2!1sen!2slk"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="item">
+                        <div class="item-content">
+                            <h2 class="about-title">
+                                <h2 x-text="sinharaja01" id="sinh100"></h2>
+                            </h2>
+                            <div class="about-desc">
+                                <p x-text="sinharajaContent01" id="sinh200"></p>
+                                <p x-text="sinharajaContent02" id="sinh300"></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="site-banner">
+            <button onclick="showLoginDialog()" id="editButton5" style="display: none;">
+                <h1>Edit-Content</h1><i class="fal fa-edit"></i>
+              </button>
+            <div class="content">
+                <div class="row">
+                    <p x-text="banner01" id="ban100"></p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Location</th>
+                    <th>Unique Animal Name </th>
+                    <th>Interesting Facts</th>
+                    <th>Diet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="No">1</td>
+                    <td data-label="Location">Sinharaja Forest</td>
+                    <td data-label="Animal name">Sri Lankan Leopard</td>
+                    <td data-label="Interesting Facts">The Sri Lankan Leopard (Panthera pardus kotiya) occupies a
+                        distinctive place in the ecosystem. This elusive big cat, although not as frequently encountered
+                        as
+                        in some other habitats, adds an air of mystery to the rainforest. The dense canopy and diverse
+                        terrain of Sinharaja provide an ideal environment for the leopard's solitary and stealthy
+                        nature.<br>Despite the challenges of spotting these elusive creatures amidst the dense
+                        vegetation,
+                        the presence of the Sri Lankan Leopard underscores the ecological richness of Sinharaja. As a
+                        top
+                        predator, it plays a crucial role in maintaining the balance of the rainforest ecosystem,
+                        regulating
+                        prey populations and contributing to the overall health of this UNESCO World Heritage Site.
+                        Conservation efforts within Sinharaja Forest aim to protect not only the leopard but also the
+                        entire
+                        intricate web of life that relies on the forest's delicate equilibrium.
+                    </td>
+                    <td data-label="Diet">Deer<br>Wild Boar<br>Monkeys<br>SmallMammals<br>Birds<br>Reptiles</td>
+                </tr>
+
+                <tr>
+                    <td data-label="No">2</td>
+                    <td data-label="Location">Horton Plains National Park</td>
+                    <td data-label="Animal name">Sri Lanka Whistling Thrush</td>
+                    <td data-label="Interesting Facts">Sri Lanka Whistling Thrush is that it is known for its melodious
+                        and
+                        flute-like whistling calls, which are often heard during the early morning and late evening. The
+                        males are particularly vocal during the breeding season, contributing to the enchanting
+                        soundscape
+                        of the highland forests in Sri Lanka.</td>
+                    <td data-label="Diet"> insects<br> worms<br>small snails</td>
+                </tr>
+
+                <tr>
+                    <td data-label="No">3</td>
+                    <td data-label="Location">Minneriya National Park</td>
+                    <td data-label="Animal name">Sloth Bear</td>
+                    <td data-label="Interesting Facts">An interesting fact about them is that they have a unique method
+                        of
+                        feeding: they have a specialized long lower lip that aids in sucking up insects like termites
+                        and
+                        ants, making them distinct from other bear species in terms of diet and foraging behavior.</td>
+                    <td data-label="Diet">Termites<br>Ants<br>Fruits<br>SmallMammals</td>
+                </tr>
+
+                <tr>
+                    <td data-label="No">4</td>
+                    <td data-label="Location">udawalawe national park</td>
+                    <td data-label="Animal name">Sri Lankan Elephant</td>
+                    <td data-label="Interesting Facts">The Sri Lankan elephant is the largest of the three subspecies of
+                        the
+                        Asian subspecies. Therefore, a Sri Lankan elephant would be much larger than those you see in
+                        India
+                        or Sumatra! On average, they're about 11 feet tall and can weigh up to 5400kgs.</td>
+                    <td data-label="Diet">Leaves<br>Bark<br>Fruits<br>ShootsandTwigs</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">
+                        <p>Note:This table provides insights into the wildlife found in Horton Plains National Park,
+                            Minneriya National Park, and the udawalawe national park in Sri Lanka, showcasing diverse
+                            species in each location </p>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <section class="gallery" id="gallery">
+            <div class="heading">
+                <h1 class="title">Album </h1>
+                <p class="subtitle">look at the beauty of wild Sri Lanka</p>
+            </div>
+            <div class="items">
+
+                <div class="card">
+                    <img src="./assets/album/pexels-pixabay-259434.jpg" alt="" srcset="">
+                </div>
+                <div class="card">
+                    <img src="./assets/album/pexels-amit-talwar-2676399.jpg" alt="" srcset="">
+                </div>
+                <div class="card">
+                    <img src="./assets/album/pexels-leonardo-jarro-633437.jpg" alt="" srcset="">
+                </div>
+                <div class="card">
+                    <img src="./assets/album/pexels-pixabay-247373.jpg" alt="" srcset="">
+                </div>
+                <div class="card">
+                    <img src="./assets/album/pexels-bo-ponomari-14621285.jpg" alt="" srcset="">
+                </div>
+                <div class="card">
+                    <img src="./assets/album/pexels-tomáš-malík-1998436.jpg" alt="" srcset="">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="contact" id="contact">
+
+            <div class="content">
+                <div class="items">
+
+                    <div class="item">
+                        <div class="heading">
+                            <h1 class="title">Contact Us</h1>
+                            <div class="subtitle">We are able to replay within 24 hours. </div>
+                        </div>
+                        <div class="row">
+                            <div class="card">
+                                <div class="line">
+                                    <span><i class="ri-phone-line"></i></span>
+                                    <h4>Call us</h4>
+                                </div>
+
+                                <p>+94 123456789</p>
+                            </div>
+                            <div class="card">
+                                <div class="line">
+                                    <span><i class="ri-mail-line"></i></span>
+                                    <h4>Mail us</h4>
+                                </div>
+                                <p>contactus@Prime-Safari.LK</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <form action="" method="post">
+                            <input type="mail" class="input" placeholder="Your Email">
+                            <input type="text" class="input" placeholder="Your Phone">
+                            <textarea rows="6" class="input" placeholder="Your Message"></textarea>
+                            <button class="btn-contact">send a message ! </button>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- Pop up dialog -->
+        <div class="form-container">
+            <dialog id="login-dialog" style="max-height: 400px; overflow-y: auto;">
+                <h2>Prime-Safari</h2>
+                <button type="button" class="close" id="btnClose"><i class="ri-close-fill"></i></button>
+                <button type="button" id="btn" style="margin-left: 5px;">Submit</button>
+                <h2 id="pop" contenteditable="true"></h2> <!-- Updated: removed @input event -->
+                <p id="pop01" contenteditable="true"></p>
+                <p id="pop02" contenteditable="true"></p>
+                <p id="pop03" contenteditable="true"></p>
+                <p id="free" contenteditable="true"></p>
+                <p id="pop04" contenteditable="true"></p>
+                <p id="free01" contenteditable="true"></p>
+                <p id="pop05" contenteditable="true"></p>
+                <p id="free03" contenteditable="true"></p>
+                <h2 id="pop06" contenteditable="true"></h2>
+                <p id="free04" contenteditable="true"></p>
+                <h4 id="pop07" contenteditable="true"></h4>
+                <p id="pop08" contenteditable="true"></p>
+                <p id="free05" contenteditable="true"></p>
+                <h4 id="pop09" contenteditable="true"></h4>
+                <p id="pop10" contenteditable="true"></p>
+                <p id="free06" contenteditable="true"></p>
+                <h4 id="pop11" contenteditable="true"></h4>
+                <p id="pop12" contenteditable="true"></p>
+                <p id="free07" contenteditable="true"></p>
+                <h2 id="pop13" contenteditable="true"></h2>
+                <p id="pop14" contenteditable="true"></p>
+                <p id="free08" contenteditable="true"></p>
+                <p id="pop15" contenteditable="true"></p>
+                <p id="free09" contenteditable="true"></p>
+                <h2 id="pop16" contenteditable="true"></h2>
+                <p id="pop17" contenteditable="true"></p>
+                <p id="free10" contenteditable="true"></p>
+                <p id="pop18" contenteditable="true"></p>
+                <p id="free11" contenteditable="true"></p>
+                <h2 id="pop19" contenteditable="true"></h2>
+                <p id="pop20" contenteditable="true"></p>
+                <p id="free12" contenteditable="true"></p>
+                <p id="pop21" contenteditable="true"></p>
+                <p id="free13" contenteditable="true"></p>
+                <h2 id="pop22" contenteditable="true"></h2>
+                <p id="free14" contenteditable="true"></p>
+                <p id="pop23" contenteditable="true"></p>
+                <p id="free15" contenteditable="true"></p>
+                <p id="pop24" contenteditable="true"></p>
+                
+
+
+                
+            </dialog>
+            <!-- End of pop up dialog -->
+        </div>
+        <footer class="footer">
+
+            <div class="content">
+                <h4>Prime-Safari</h4>
+                <div class="social">
+                    <span>
+                        <a href="#f"><i class="ri-facebook-fill"></i></a>
+                    </span>
+                    <span>
+                        <a href="#f"><i class="ri-instagram-fill"></i></a>
+                    </span>
+                    <span>
+                        <a href="#f"><i class="ri-twitter-fill"></i></a>
+                    </span>
+                    <span>
+                        <a href="#f"><i class="ri-linkedin-fill"></i></a>
+                    </span>
+                    <span>
+                        <a href="#f"><i class="ri-youtube-fill"></i></a>
+                    </span>
+                </div>
+                <p>
+                    <i class="ri-double-quotes-l" x-text="footer" id="fo111"></i> </i>
+
+
+                    <i class="ri-double-quotes-r"></i>
+
+                </p>
+                <p x-text="footer02" id="fo222"></p>
+                <div class="newsletter-box">
+
+                    <h2>Sign up for our newsletter</h2>
+                    <p>Get the latest news and updates delivered straight to your inbox.</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <ul class="navigation">
+                    <li class="link"><a href="#home">home</a></li>
+                    <li class="link"><a href="#about">Sri Lankan Wildlife</a></li>
+                    <li class="link"><a href="#next">National Parks in LK</a></li>
+                    <li class="link"><a href="#blog">key topics</a></li>
+                    <li class="link"><a href="#gallery">gallery</a></li>
+                    <li class="link"><a href="#contact">contact</a></li>
+
+                </ul>
+            </div>
+            <div class="rights">
+                Copyrights &#169 <a href="http://" target="_blank" rel="noopener noreferrer">Prime-Safari</a>. all
+                rights
+                reserved
+            </div>
+        </footer>
+    </section>
+    <script src="sri_lanken_wild_life.js"></script>
+
+
+    <!-- display edit block -->
+<script>
+    // Check if the value is set in localStorage
+    const changeStyle = localStorage.getItem('changeStyle');
+
+    if (changeStyle === 'true') {
+        // Change the style of the element
+        document.getElementById('editButton').style.display = 'block';
+        document.getElementById('editButton1').style.display = 'block';
+        document.getElementById('editButton2').style.display = 'block';
+        document.getElementById('editButton3').style.display = 'block';
+        document.getElementById('editButton4').style.display = 'block';
+        document.getElementById('editButton5').style.display = 'block';
+       
+        
+
+        // Clear the value from localStorage so it doesn't trigger again
+        localStorage.removeItem('changeStyle');
+    }
+</script>
+<!-- edit block end  -->
+</body>
+
+</html>

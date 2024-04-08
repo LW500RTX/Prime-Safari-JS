@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets\album/lion.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets\album/lion.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime-Safari.Lk | Home </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="site.webmanifest">
+  <script src="//unpkg.com/alpinejs" defer></script>
+
+
+
+</head>
+
+<body>
+
+  <input type="checkbox" id="bars">
+  <nav class="nav-bar" id="navbar">
+    <div class="content">
+      <div class="site-logo">
+        <a href="index.html" class="logo-link">Prime-Safari.LK</a>
+      </div>
+
+
+      <ul class="navigation">
+        <li class="link"><a href="./index.html">home</a></li>
+        <li class="link"><a href="./sri lanken%20willife%20introduction.html">SL Wildlife</a></li>
+        <li class="link"><a href="#next">National Parks <i class="fas fa-caret-down"></i></a>
+          <ul class="sub-nav">
+            <li class="link"><a href="./prime safari Yala National Park.html ">Yala</a></li>
+            <li class="link"><a href="./prime safari wilpaththu.html ">Wilpattu</a></li>
+          </ul>
+        </li>
+        <li class="link"><a href="./prime safari animals.html">Animals<i class="fas fa-caret-down"></i></a>
+          <ul class="sub-nav">
+            <li class="link"><a href="./prime safari The Sri Lankan Leopard.html ">Leopard</a></li>
+          </ul>
+        </li>
+        <li class="link"><a href="./Conservation.html">Conservation</a></li>
+        <li class="link"><a href="./index.html#blog">topics</a></li>
+        <li class="link"><a href="./index.html#gallery">gallery</a></li>
+        <li class="link"><a href="#contact">contact</a></li>
+        <li class="link"><a href="./index101.html">Log In</a></li>
+
+
+      </ul>
+
+      <label for='bars' class="icon-bars"><i class="ri-bar-chart-2-fill"></i></label>
+    </div>
+  </nav>
+
+  <header class="home" id="home">
+
+    <div class="content">
+      <h1>Discover <strong>the Wild </strong>Heart <strong>of </strong>Sri Lanka </h1>
+      <h4>Experience Nature Like Never Before</h4>
+
+    </div>
+  </header>
+
+  <section x-data="introductionData">
+    <section class="about" id="about">
+      <div class="content">
+        <button onclick="showLoginDialog()" id="editButton" style="display: none;">
+          <h1>Edit-Content</h1><i class="fal fa-edit"></i>
+        </button>
+        <div class="items">
+
+          <div class="image">
+            <img src="./assets/about.avif" alt="" srcset="">
+          </div>
+          <div class="item">
+            <div class="item-content">
+              <h2 x-text="h1Intro" id="introH1">
+              </h2>
+              <div class="about-desc">
+                <p x-text="descriptionIntro" id="descri01"></p>
+
+                <p x-text="descriptionIntrOne" id="des02"></p>
+
+
+              </div>
+            </div>
+
+            <div class="item-data">
+              <div class="col">
+                <h2 x-text="numberOne" id="num01"> </h2>
+                <span>completed trips</span>
+              </div>
+              <div class="col">
+                <h2 x-text="numberTow" id="num02"></h2>
+                <span>Tour Guides</span>
+              </div>
+              <div class="col">
+                <h2 x-text="numberThree" id="num03"></h2>
+                <span>Destinations</span>
+              </div>
+
+            </div>
+
+            <a href="sri lanken willife introduction.html">
+              <button class="btn-explore">Explore more <i class="ri-arrow-right-line"></i> </button>
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <section class="next" id="next">
+      <div class="heading">
+        <button onclick="showLoginDialog()" id="editButton2" style="display: none;">
+          <h1>Edit-Content</h1><i class="fal fa-edit"></i>
+        </button>
+        <h1 class="title">discover the most popular national parks in Sri Lanka</h1>
+        <p class="subtitle">Let's see the life of Wild</p>
+      </div>
+      <div class="content">
+        <div class="items">
+          <div class="card">
+            <div class="image">
+              <img src="./assets/album/yale.jpg" alt="" srcset="">
+            </div>
+            <div class="content-card">
+              <h4 x-text="Yala" id="ya"></h4>
+              <p x-text="YalaText" id="ya01"></p>
+
+
+              <a href="prime safari Yala National Park.html">
+                <button class="btn-read">read More</button>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="image">
+              <img src="./assets/album/Udawalawe.jpg" alt="" srcset="">
+            </div>
+            <div class="content-card">
+              <h4 x-text="Wilpattu" id="wil"></h4>
+              <p x-text="wilpattuText" id="wil01"></p>
+
+              <a href="prime safari wilpaththu.html">
+                <button class="btn-read">read More</button>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="image">
+              <img src="./assets/album/wilpaththu 1.jpg" alt="" srcset="">
+            </div>
+            <div class="content-card">
+              <h4 x-text="Udawalawe" id="uda"></h4>
+              <p x-text="UdawalaweText" id="uda01"></p>
+
+
+              <a href="https://en.wikipedia.org/wiki/Udawalawe_National_Park">
+                <button class="btn-read">read More</button>
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="blog" id="blog">
+      <div class="heading">
+        <button onclick="showLoginDialog()" id="editButton3" style="display: none;">
+          <h1>Edit-Content</h1><i class="fal fa-edit"></i>
+        </button>
+        <h1 class="title" x-text="">
+          <ul>
+            <li>Why Sri Lankan Wildlife
+        </h1>
+        </li>
+        </ul>
+        <p class="subtitle">Here's Three Things About Sri Lankan Wildlife</p>
+      </div>
+      <div class="content">
+        <div class="items">
+          <div class="card">
+            <img src="./assets/album/bio diversity 4.avif" alt="" srcset="">
+            <div class="content-card">
+              <ul>
+                <li>Diverse Biodiversity</li>
+              </ul>
+              <p x-text="Biodiversity" id="bio"></p>
+
+
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/album/Iconic Wildlife Species.avif" alt="" srcset="">
+            <div class="content-card">
+              <ul>
+                <li>Iconic Wildlife Species</li>
+              </ul>
+              <p x-text="Species" id="spe"></p>
+
+
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/album/Conservation Efforts.avif" alt="" srcset="">
+            <div class="content-card">
+              <ul>
+                `<li>Conservation Efforts</li>
+              </ul>
+              <p x-text="Efforts" id="ef"></p>
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <h1 class="grid-titel" x-text="h1res">
+
+
+    </h1>
+    <button onclick="showLoginDialog()" id="editButton4" style="display: none;">
+      <h1>Edit-Content</h1><i class="fal fa-edit"></i>
+    </button>
+    <section class="grid-section">
+      <div class="grid-container">
+
+        <div class="grid-item">
+          <ol>
+            <li> 1 Habitat Preservation</li>
+            <p x-text="One" id="on"></p>
+        </div>
+        <div class="grid-item">
+          <ol>
+            <li> 2 Promoting Sustainable Practices</li>
+            <p x-Text="TOw" id="to"></p>
+        </div>
+        <div class="grid-item">
+          <ol>
+            <li> 3 Combatting Illegal Wildlife Trade</li>
+            <p x-text="Three" id="th"></p>
+        </div>
+        <div class="grid-item">
+          <ol>
+            <li>4 Community Engagement and Education</li>
+            <p x-Text="Four" id="fo"></p>
+        </div>
+        <div class="grid-item">
+          <ol>
+            <li>5 Responsible Tourism</li>
+            <p x-text="Five" id="fi"></p>
+        </div>
+        <div class="grid-item">
+          <ol>
+            <li> 6 Supporting Conservation Organizations</li>
+            <p x-text="Six" id="si"></p>
+        </div>
+        <div class="grid-item">
+          <ol>
+            <li> 7 Addressing Climate Change</li>
+            <p x-text="Seven" id="se"></p>
+        </div>
+        <div class="grid-item">
+          <ol>
+            <li> 8 Endangered Species Protection</li>
+            <p x-text="Eght" id="eg"></p>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+
+    <div class="site-banner">
+      <div class="content">
+        <button onclick="showLoginDialog()" id="editButton5" style="display: none;">
+          <h1>Edit-Content</h1><i class="fal fa-edit"></i>
+        </button>
+        <div class="row">
+          <p x-text="banner" id="ba"></p>
+        </div>
+      </div>
+
+    </div>
+
+    <section class="gallery" id="gallery">
+      <div class="heading">
+        <h1 class="title">Our Album </h1>
+        <p class="subtitle">We have best Photographers wait you for take your personnel pictures!</p>
+      </div>
+      <div class="items">
+
+        <div class="card">
+          <img src="./assets/album/pexels-0.jpg" alt="" srcset="">
+        </div>
+        <div class="card">
+          <img src="./assets/album/deer-1367217.jpg" alt="" srcset="">
+        </div>
+        <div class="card">
+          <img src="./assets/album/jaguar-2894706.jpg" alt="" srcset="">
+        </div>
+        <div class="card">
+          <img src="./assets/album/monky.jpg" alt="" srcset="">
+        </div>
+        <div class="card">
+          <img src="./assets/album/wilpaththu.jpg" alt="" srcset="">
+        </div>
+        <div class="card">
+          <img src="./assets/album/pexels-liudmyla-shalimova-19768224.jpg" alt="" srcset="">
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="contact" id="contact">
+
+      <div class="content">
+        <div class="items">
+
+          <div class="item">
+            <div class="heading">
+              <h1 class="title">Contact Us</h1>
+              <div class="subtitle">We are able to replay within 24 hours. </div>
+            </div>
+            <div class="row">
+              <div class="card">
+                <div class="line">
+                  <span><i class="ri-phone-line"></i></span>
+                  <h4>Call us</h4>
+                </div>
+
+                <p>+94 123456789</p>
+              </div>
+              <div class="card">
+                <div class="line">
+                  <span><i class="ri-mail-line"></i></span>
+                  <h4>Mail us</h4>
+                </div>
+                <p>contactus@Prime-Safari.LK</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <form action="" method="post"onsubmit="saveContactDetails(event)">
+              <input type="mail" class="input" placeholder="Your Email">
+              <input type="text" class="input" placeholder="Your Phone">
+              <textarea rows="6" class="input" placeholder="Your Message"></textarea>
+              <button class="btn-contact">send a message ! </button>
+            </form>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+    <!-- Pop up dialog -->
+    <div class="form-container">
+      <dialog id="login-dialog" style="max-height: 400px; overflow-y: auto;">
+        <h2>Prime-Safari</h2>
+
+        <button type="button" class="close" id="btnClose"><i class="ri-close-fill"></i></button>
+        <button type="button" id="btn" style="margin-left: 5px;">Submit</button>
+
+        <h2 id="dialogTitle" contenteditable="true"></h2> <!-- Updated: removed @input event -->
+        <p id="free" contenteditable="true"></p>
+        <p id="hello" contenteditable="true"></p>
+        <p id="free01" contenteditable="true"></p>
+        <p id="dia" contenteditable="true"></p>
+        <p id="free02" contenteditable="true"></p>
+        <h2 id="pop" contenteditable="true"></h2>
+        <h2 id="pop01" contenteditable="true"></h2>
+        <h2 id="pop02" contenteditable="true"></h2>
+        <p id="free03" contenteditable="true"></p>
+        <h3 id="pop03" contenteditable="true"></h3>
+        <p id="pop04" contenteditable="true"></p>
+        <h3 id="pop05" contenteditable="true"></h3>
+        <p id="pop06" contenteditable="true"></p>
+        <h3 id="pop07" contenteditable="true"></h3>
+        <p id="pop08" contenteditable="true"></p>
+        <p id="free04" contenteditable="true"></p>
+        <p id="pop09" contenteditable="true"></p>
+        <p id="free05" contenteditable="true"></p>
+        <p id="pop10" contenteditable="true"></p>
+        <p id="free06" contenteditable="true"></p>
+        <p id="pop11" contenteditable="true"></p>
+        <p id="free17" contenteditable="true"></p>
+        <p id="pop12" contenteditable="true"></p>
+        <p id="free07" contenteditable="true"></p>
+        <p id="pop13" contenteditable="true"></p>
+        <p id="free16" contenteditable="true"></p>
+        <p id="pop14" contenteditable="true"></p>
+        <p id="free08" contenteditable="true"></p>
+        <p id="pop15" contenteditable="true"></p>
+        <p id="free09" contenteditable="true"></p>
+        <p id="pop16" contenteditable="true"></p>
+        <p id="free10" contenteditable="true"></p>
+        <p id="pop17" contenteditable="true"></p>
+        <p id="free11" contenteditable="true"></p>
+        <p id="pop18" contenteditable="true"></p>
+        <p id="free12" contenteditable="true"></p>
+        <p id="pop19" contenteditable="true"></p>
+        <p id="free13" contenteditable="true"></p>
+        <h3 id="pop20" contenteditable="true"></h3>
+        <p id="free14" contenteditable="true"></p>
+        <p id="pop21" contenteditable="true"></p>
+        <p id="free15" contenteditable="true"></p>
+        <p id="pop22" contenteditable="true"></p>
+
+
+      </dialog>
+      <!-- End of pop up dialog -->
+    </div>
+    <footer class="footer" id="footer">
+
+      <div class="content">
+        <h4>Prime-Safari</h4>
+        <div class="social">
+          <span>
+            <a href="#f"><i class="ri-facebook-fill"></i></a>
+          </span>
+          <span>
+            <a href="#f"><i class="ri-instagram-fill"></i></a>
+          </span>
+          <span>
+            <a href="#f"><i class="ri-twitter-fill"></i></a>
+          </span>
+          <span>
+            <a href="#f"><i class="ri-linkedin-fill"></i></a>
+          </span>
+          <span>
+            <a href="#f"><i class="ri-youtube-fill"></i></a>
+          </span>
+        </div>
+        <p>
+          <i class="ri-double-quotes-l" x-text="footer" id="fo01"></i> </i>
+
+
+          <i class="ri-double-quotes-r"></i>
+
+        </p>
+        <p x-text="footer02" id="fo02"></p>
+        <div class="newsletter-box" id="newsLetter">
+          <h2>Sign up for our newsletter</h2>
+          <p>Get the latest news and updates delivered straight to your inbox.</p>
+          <form onsubmit="return storeNewsLetter()">
+            <input type="email" placeholder="Enter your email address" id="emailInput">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+
+
+        <ul class="navigation">
+          <li class="link"><a href="#">home</a></li>
+          <li class="link"><a href="#">Sri Lankan Wildlife</a></li>
+          <li class="link"><a href="#">National Parks in LK</a></li>
+          <li class="link"><a href="#">key topics</a></li>
+          <li class="link"><a href="#">gallery</a></li>
+          <li class="link"><a href="#">contact</a></li>
+
+        </ul>
+      </div>
+      <div class="rights">
+        Copyrights &#169 <a href="http://" target="_blank" rel="noopener noreferrer">Prime-Safari</a>. all rights
+        reserved
+      </div>
+
+
+      <!--Resorsers for the web page 
+         Deatels -  Frome https://www.wikipedia.org/
+                          https://www.dwc.gov.lk/ 
+                          
+                          
+         Imagers -  Frome https://pixabay.com/   
+        
+        Youtube tutorials - Frome youtube.com. Learn HTML and CSS in 30 Days. ...
+                            khanacademy.org. Making Web Pages with HTML and CSS. ...
+                            diveintohtml5.net. Dive Into HTML5. ...
+                            codecademy.com. Learn HTML and CSS. ...
+                            youtube.com. HTML5 Tutorials. ...
+                            htmldog.com. HTML Beginner Tutorial. ...
+                            coursera.org. HTML, CSS, and JavaScript. ...
+                            w3schools.com. HTML5 Tutorial.
+    -->
+    </footer>
+
+
+
+    <script>
+      // Function to save contact details to local storage
+      function saveContactDetails(event) {
+          event.preventDefault(); // Prevent the form from submitting normally
+          
+          var email = document.getElementById('emailInput').value;
+          var phone = document.getElementById('phoneInput').value;
+          var message = document.getElementById('messageInput').value;
+      
+          localStorage.setItem('email', email);
+          localStorage.setItem('phone', phone);
+          localStorage.setItem('message', message);
+      
+          // Update the table with contact details
+          var table = document.getElementById('contactTable');
+          table.innerHTML = ""; // Clear previous data
+      
+          var row1 = table.insertRow();
+          row1.insertCell(0).innerHTML = 'Phone';
+          row1.insertCell(1).innerHTML = phone;
+      
+          var row2 = table.insertRow();
+          row2.insertCell(0).innerHTML = 'Email';
+          row2.insertCell(1).innerHTML = email;
+      
+          var row3 = table.insertRow();
+          row3.insertCell(0).innerHTML = 'Message';
+          row3.insertCell(1).innerHTML = message;
+      }
+      </script>
+
+  </section>
+  <script src="index.js"></script>
+
+
+
+
+  <script>
+       document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get user inputs
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Store user inputs in local storage
+      localStorage.setItem('name', name);
+      localStorage.setItem('email', email);
+      localStorage.setItem('message', message);
+
+      // Redirect to new HTML file
+      window.location.href = 'display.html';
+    });
+
+  </script>
+
+
+<!-- display edit block -->
+<script>
+        // Check if the value is set in localStorage
+        const changeStyle = localStorage.getItem('changeStyle');
+
+        if (changeStyle === 'true') {
+            // Change the style of the element
+            document.getElementById('editButton').style.display = 'block';
+            document.getElementById('editButton2').style.display = 'block';
+            document.getElementById('editButton3').style.display = 'block';
+            document.getElementById('editButton4').style.display = 'block';
+            document.getElementById('editButton5').style.display = 'block';
+
+            // Clear the value from localStorage so it doesn't trigger again
+            localStorage.removeItem('changeStyle');
+        }
+    </script>
+<!-- edit block end  -->
+
+
+</body>
+
+</html>

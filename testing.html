@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome To Prime Safari</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url(./assets/album/album-5.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-decoration: none;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-gap: 20px;
+      text-decoration: none;
+    }
+
+    .grid-item {
+      background-color: #000000;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      /* Add box-sizing */
+      border-color: #ff0000;
+      /* Change border color on hover */
+      border: 2px solid rgb(255, 255, 255);
+      text-decoration: none;
+      ;
+    }
+
+    .grid-item:hover {
+      background-color: #5a5a5a;
+      /* Change color on hover */
+      text-decoration: none;
+    }
+
+    .grid-item:hover {
+      transform: translateY(-5px);
+      text-decoration: none;
+    }
+
+    .grid-item h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .grid-item p {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .grid-item img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      text-decoration: none;
+
+    }
+
+    .grid-item a {
+      text-decoration: none;
+      /* Remove underlining */
+      color: inherit;
+      /* Inherit text color */
+    }
+
+    .logout {
+      font-size: 25px;
+    }
+
+    h1 {
+      text-align: center;
+      text-decoration: none;
+      font-size: 56px;
+      line-height: 68px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      -webkit-text-stroke: 3px #000000;
+      max-width: 450px;
+      margin: 0 auto;
+      /* Center the h1 horizontally */
+      color: white;
+
+      /*
+
+  }
+
+  .grid-item a {
+    text-decoration: none; /* Remove text decoration for anchor tags */
+    }
+
+    .grid-item img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      border: 2px solid #6a6969;
+      /* Add border around the images */
+    }
+
+    .logout {
+      background-color: #ff0000; /* Red background color */
+      color: #ffffff; /* White text color */
+      border: none; /* Remove border */
+      padding: 10px 20px; /* Add padding */
+      font-size: 16px; /* Font size */
+      cursor: pointer; /* Add cursor pointer */
+      margin-right: 100px; /* Add margin to the right */
+      margin-top: 60px; /* Add margin to the top */
+    }
+
+    .logout:hover {
+      background-color: #cc0000; /* Darker red background color on hover */
+    }    
+  </style>
+</head>
+
+<body>
+  <button onclick="logOut()" class="logout" style="float: right;">Logout</button>
+
+  <!-- user authenticate part  -->
+  <div class="container">
+    <h1>Welcome TO<strong> Prime </strong> Safari</h1>
+    <div class="grid-container">
+      <div class="grid-item">
+        <a href="index.html">
+          <img src="./assets/album-2.jpg" alt="Data Analytics">
+          <h2>Home</h2>
+          <p>DISCOVER THE WILD HEART OF SRI LANKA</p>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="sri lanken willife introduction.html">
+          <img src="./assets/album-4.jpg" alt="Notifications">
+          <h2>SL WildLife</h2>
+          <p>JOURNEY THROUGH WILDLIFE HAVENS</p>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="index.html#next">
+          <img src="assets/album/istockphoto-1134711960-612x612.jpg" alt="Tasks">
+          <h2>National parks</h2>
+          <p> EXPLORE OUR NATION'S NATURAL TREASURES IN THE NATIONAL PARKS</p>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="prime safari animals.html">
+          <img src="./assets/album/pexels-melisa-valentin-704454.avif" alt="Calendar">
+          <h2>Animals</h2>
+          <p>DISCOVER THE RICH WILD LIFE HERITAGE</p>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="Conservation.html">
+          <img src="./assets/album/flowers-1835619.jpg" alt="Settings">
+          <h2>Conservation</h2>
+          <p>WE PROTECT THE BIO DIVERSITY OF SRI LANKA</p>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="prime safari Yala National Park.html">
+          <img src="./assets/album/mushrooms-2798150.jpg" alt="Data Analytics">
+          <h2>Yala</h2>
+          <p>DISCOVER THE UNTAMED BEAUTY OF YALA NATIONAL PARK</p>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="prime safari wilpaththu.html">
+          <img src="assets/album/istockphoto-1307426022-612x612.jpg" alt="Example">
+          <h2>Wilpattu</h2>
+          <p>EXPLORE THE WILD WONDERS OF WILPATTU NATIONAL PARK</p>
+        </a>
+      </div>
+
+      <div class="grid-item">
+        <a href="prime safari The Sri Lankan Leopard.html">
+          <img src="./assets/album/leopard-2895448.jpg" alt="Additional">
+          <h2>Leopard</h2>
+          <p>ONE OF THE MOST ICONIC WILDLIFE SPECIES</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- user aouthticate part  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h1>Newsletter Subscribers</h1> <!-- Add the h1 tag here -->
+
+
+  <section class="newsletter" id="newsLetterId" style="display: none;">
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        align-items: center;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+        color: white;
+        
+      }
+
+      th {
+        background-color: #000000;
+      }
+
+      
+    </style>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Email Address</th>
+          
+        </tr>
+      </thead>
+      <tbody id="emailList">
+        <!-- Subscribers will be dynamically inserted here -->
+      </tbody>
+    </table>
+    <script>
+      // Retrieve query parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const isAdmin = urlParams.get('admin');
+
+      // Check if user is admin and display admin content
+      if (isAdmin === "true") {
+        document.getElementById("newsLetterId").style.display = "flex";
+      } else {
+        document.getElementById("newsLetterId").style.display = "none";
+      }
+
+      // newsletter js part
+      let newsLetter = JSON.parse(localStorage.getItem("newsLetter")) || [];
+      const emailList = document.getElementById("emailList");
+
+      function displayEmails() {
+        emailList.innerHTML = ""; // Clear previous list
+
+        // Loop through emails and create table rows
+        newsLetter.forEach((emailObject, index) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+                  <td>${emailObject.email}</td>
+                
+              `;
+          emailList.appendChild(row); // Append row to emailList
+        });
+
+
+     
+      }
+
+      // Call the displayEmails function to display the emails when the page loads
+      displayEmails();
+    </script>
+  </section>
+
+<script>
+     function logOut() {
+      // Redirect the user to index.html
+      window.location.href = "index101.html";
+    }
+</script>
+
+</body>
+
+</html>
+
+

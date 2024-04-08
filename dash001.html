@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Information</title>
+  <!-- Link your CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="contact-info">
+  <div class="content">
+    <h1>Contact Information</h1>
+    <div class="contact-details">
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <p><strong>Phone:</strong> <span id="phone"></span></p>
+      <p><strong>Message:</strong> <span id="message"></span></p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Retrieve data from local storage
+  var email = localStorage.getItem('email');
+  var phone = localStorage.getItem('phone');
+  var message = localStorage.getItem('message');
+
+  // Display the retrieved data
+  document.getElementById('email').textContent = email;
+  document.getElementById('phone').textContent = phone;
+  document.getElementById('message').textContent = message;
+</script>
+
+</body>
+</html>

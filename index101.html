@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style700.css">
+  <title>Prime-Safari.Lk |Sign In/Sign Up Page </title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./index.html#footer">About</a></li>
+      <li><a href="./index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="login-container">
+    <div class="login-form" id="loginForm">
+      <h1>Sign In</h1>
+      <div class="social-icons">
+        <a href="#" class="icon"><i class='bx bxl-google-plus'></i></a>
+        <a href="#" class="icon"><i class='bx bxl-facebook'></i></a>
+        <a href="#" class="icon"><i class='bx bxl-github'></i></a>
+        <a href="#" class="icon"><i class='bx bxl-linkedin'></i></a>
+      </div>
+
+      <div class="form-message-container">
+        <span>Or use your email and password</span>
+      </div>
+
+      <form>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button type="button" onclick="loginUser()">Sign In</button>
+        <a href="#">Forgot Your Password?</a>
+      </form>
+      <p>Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+    </div>
+    <div class="signup-form hidden" id="signupForm">
+      <h1>Create An Account</h1>
+      <div class="social-icons">
+        <a href="#" class="icon"><i class='bx bxl-google-plus'></i></a>
+        <a href="#" class="icon"><i class='bx bxl-facebook'></i></a>
+        <a href="#" class="icon"><i class='bx bxl-github'></i></a>
+        <a href="#" class="icon"><i class='bx bxl-linkedin'></i></a>
+      </div>
+      <div class="form-message-container">
+        <span>Or use your email for registration</span>
+      </div>
+
+      <form>
+        <input type="text" id="regName" placeholder="Name">
+        <input type="email" id="regEmail" placeholder="Email">
+        <input type="password" id="regPassword" placeholder="Password">
+        <button type="button" onclick="registerUser()">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="#" id="showLogin">Sign In</a></p>
+    </div>
+  </div>
+
+  <script>
+
+
+
+    // Get references to login form, signup form, and buttons to switch between them
+    const loginForm = document.getElementById('loginForm'); // Reference to login form
+    const signupForm = document.getElementById('signupForm');
+    const showSignupBtn = document.getElementById('showSignup');
+    const showLoginBtn = document.getElementById('showLogin');
+
+    // Event listener to switch to signup form when the 'Sign Up' button is clicked
+    showSignupBtn.addEventListener('click', () => {
+      loginForm.classList.add('hidden'); // Hide login form
+      signupForm.classList.remove('hidden'); // Show signup form
+    });
+
+    // Event listener to switch to login form when the 'Sign In' button is clicked
+    showLoginBtn.addEventListener('click', () => {
+      loginForm.classList.remove('hidden'); // Show login form
+      signupForm.classList.add('hidden'); // Hide signup form
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const loginForm = document.getElementById('loginForm');
+
+      loginForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const name = document.getElementById('name').value;
+
+        // Here you can perform validation or send the login credentials to the server for verification
+
+        // For demonstration purposes, let's assume the login is successful if the email and password are not empty
+        if (email.trim() !== '' && password.trim() !== '') {
+          // Redirect to index.html upon successful login
+          window.location.href = 'index.html';
+        } else {
+          // Display error message if email or password is empty
+          alert('Please enter both email and password.');
+        }
+      });
+    });
+
+
+
+
+
+
+    // for the login part 
+    function loginUser() {
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+
+      let userRecords = JSON.parse(localStorage.getItem("users")) || [];
+
+      let userFound = userRecords.some(user => user.email === email && user.password === password);
+
+      if (userFound) {
+        alert("Login Successful");
+        let currentUser = userRecords.find(user => user.email === email);
+        localStorage.setItem("name", currentUser.name);
+        localStorage.setItem("email", currentUser.email);
+        window.location.href = "dashbord.html";
+      } else {
+        alert("Login Failed");
+      }
+    }
+
+
+
+
+
+
+
+    //user profile part
+
+    // Retrieve users from local storage
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const userList = document.getElementById("userList");
+
+    // Function to display users
+    function displayUsers() {
+      userList.innerHTML = ""; // Clear previous list
+
+      // Loop through users and create list items
+      users.forEach(user => {
+        const li = document.createElement("li");
+        li.textContent = `Name: ${user.name}, Email: ${user.email}, Password: ${user.password}`;
+        userList.appendChild(li); // Append list item to userList
+      });
+    }
+
+    // Display users when the page loads
+    displayUsers();
+
+
+    // Retrieve query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const isAdmin = urlParams.get('admin');
+
+    // Check if user is admin and display admin content
+    if (isAdmin === "true") {
+      document.getElementById("admin-content").style.display = "grid";
+    } else {
+      document.getElementById("user-content").style.display = "grid";
+    }
+
+
+
+    function logOut() {
+      localStorage.removeItem("name");
+      localStorage.removeItem("email");
+      window.location.href = "newlogin2.html"
+    }
+
+
+
+
+
+    const wrapper = document.querySelector('.wrapper');
+    const loginLink = document.querySelector('.login-link');
+    const registerLink = document.querySelector('.register-link');
+    const btnPopup = document.querySelector('.btnloging-popup');
+    const iconClose = document.querySelector('.icon-close');
+
+
+    // Show register form
+    registerLink.addEventListener('click', () => {
+      wrapper.classList.add('active');
+    });
+
+    // Hide register form
+    loginLink.addEventListener('click', () => {
+      wrapper.classList.remove('active');
+    });
+
+    // for the login part 
+    function loginUser() {
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+
+      let userRecords = JSON.parse(localStorage.getItem("users")) || [];
+
+      let userFound = userRecords.some(user => user.email === email && user.password === password);
+
+      if (userFound) {
+        alert("Login Successful");
+        let currentUser = userRecords.find(user => user.email === email);
+        localStorage.setItem("name", currentUser.name);
+        localStorage.setItem("email", currentUser.email);
+
+        if (email === "admin" && password === "admin") {
+          window.location.href = "dashbord.html?admin=true";
+        } else {
+          window.location.href = "dashbord.html?admin=false";
+        }
+        // window.location.href = "dashbord.html"; 
+      } else {
+        alert("Login Failed");
+      }
+    }
+
+    // Registration section
+    function registerUser() {
+      let name = document.getElementById("regName").value;
+      let email = document.getElementById("regEmail").value;
+      let password = document.getElementById("regPassword").value;
+
+      let user_records = JSON.parse(localStorage.getItem("users")) || [];
+
+      if (user_records.some(v => v.email === email)) {
+        alert("Duplicate Data");
+      } else {
+        user_records.push({
+          "name": name,
+          "email": email,
+          "password": password,
+        });
+        localStorage.setItem("users", JSON.stringify(user_records));
+        alert("Registration Successful");
+        // Redirect back to login page
+        window.location.href = "index101.html";
+      }
+    }
+
+  </script>
+  <script>
+    const express = require('express');
+    const bodyParser = require('body-parser');
+    const nodemailer = require('nodemailer');
+
+    const app = express();
+    app.use(bodyParser.json());
+
+    // Configuration for nodemailer to send emails
+    const transporter = nodemailer.createTransport({
+      service: 'Gmail',
+      auth: {
+        user: 'rtx500game@gmail.com', // Your Gmail email address
+        pass: 'LALAN2001LALAN' // Your Gmail password
+      }
+    });
+
+    // Endpoint to handle login attempts
+    app.post('/login', (req, res) => {
+      const { email, password } = req.body;
+
+      // Check if the credentials match admin's
+      if (email === 'admin' && password === 'admin') {
+        // Send alert email to admin
+        const mailOptions = {
+          from: 'rtx500game@gmail.com', // Sender address
+          to: 'lalanweerasooriya@gmail.com', // Admin's email address
+          subject: 'Alert: Someone is trying to login as admin!',
+          text: `Someone attempted to login as admin with email: ${email}`
+        };
+
+        transporter.sendMail(mailOptions, (error, info) => {
+          if (error) {
+            console.log(error);
+            res.status(500).send('Error sending email.');
+          } else {
+            console.log('Email sent: ' + info.response);
+            res.status(200).send('Login attempt recorded as admin.');
+          }
+        });
+      } else {
+        // Handle regular user login logic here
+        // For demonstration purposes, assume we check against hardcoded user
+        if (email === 'regularuser@example.com' && password === 'regularuserpassword') {
+          res.status(200).send('Regular user login successful.');
+        } else {
+          res.status(403).send('Invalid credentials.');
+        }
+      }
+    });
+
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+
+  </script>
+
+  <script href="script.js"></script>
+</body>
+
+</html>
