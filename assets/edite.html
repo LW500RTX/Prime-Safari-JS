@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Editing Demo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Function to open content editor popup
+            function openEditor() {
+                // Show the popup/modal
+                $('#editorPopup').show();
+                // Gather dynamic elements on the page and allow editing
+                // Example: $('h1, p').attr('contenteditable', 'true');
+                // Populate the popup with existing content
+                var existingContent = $('#editableContent').html();
+                $('#editedContent').val(existingContent);
+            }
+
+            // Function to save changes
+            function saveChanges() {
+                // Gather edited content
+                var editedContent = $('#editedContent').val();
+                // Update the content on the page
+                $('#editableContent').html(editedContent);
+                // Save changes to server or locally
+                // Example: $.post('save.php', {content: editedContent}, function(response) { /* handle response */ });
+            }
+
+            // Event listener for edit button
+            $('#editButton').click(function() {
+                openEditor();
+            });
+
+            // Event listener for save button inside the popup
+            $('#saveButton').click(function() {
+                saveChanges();
+                // Close the popup after saving
+                $('#editorPopup').hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="editButton">Edit Content</button>
+
+    <!-- Existing content -->
+    <div id="editableContent">
+        <h1 x-text></h1> Welcome to Content Editing Demo</h1>
+        <p>This is some sample text that can be edited.</p>
+    </div>
+
+    <!-- Content Editor Popup -->
+    <div id="editorPopup" style="display: none;">
+        <h2>Edit Content</h2>
+        <textarea id="editedContent" rows="4" cols="50"></textarea>
+        <button id="saveButton">Save Changes</button>
+    </div>
+    <script src="edite.json"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
